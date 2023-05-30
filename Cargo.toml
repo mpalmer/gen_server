@@ -1,0 +1,21 @@
+[package]
+name = "gen_server"
+authors = ["Matt Palmer <matt@hezmatt.org>"]
+description = "Thread-based implementation of Erlang's gen_server"
+license = "GPL-3.0-only"
+homepage = "https://github.com/mpalmer/gen_server"
+repository = "https://github.com/mpalmer/gen_server"
+keywords = ["erlang", "gen_server", "threads", "concurrency"]
+categories = ["concurrency"]
+include = [
+    "/LICENCE",
+    "/src/*.rs",
+]
+version = "0.0.0-git"
+edition = "2021"
+
+
+[dependencies]
+crossbeam-channel = "0.5"
+log = "0.4"
+thiserror = "1.0"
