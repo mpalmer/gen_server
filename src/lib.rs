@@ -87,7 +87,7 @@ fn message_loop<S: GenServer>(
 			Ok(Status::Continue) => (),
 			Ok(Status::Stop(reason)) => break server.terminate(Ok(reason)),
 			Err(e) => break server.terminate(Err(e)),
-		};
+		}
 	}
 
 	Ok(())
