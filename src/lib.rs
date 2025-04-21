@@ -17,7 +17,7 @@ pub trait GenServer: Sized + std::fmt::Debug {
 	fn init(args: Self::Args) -> Result<Self, Self::Error>;
 
 	fn terminate(&mut self, reason: Result<Self::StopReason, Self::Error>) {
-		log::debug!("Terminating because {:?}", reason);
+		log::debug!("Terminating because {reason:?}");
 	}
 
 	//fn handle_call<R>(&mut self, request: Request) -> Result<(R, E>;
